@@ -7,6 +7,7 @@ function getTotalPrice(component, clickedPrice) {
   componentPrice.innerText = increasingPrice;
   totalPrice = totalPrice + increasingPrice;
   totalPriceDisplay.innerText = totalPrice;
+  document.getElementById("sub-total-price").innerText = totalPrice;
 }
 
 //price calculation
@@ -62,4 +63,27 @@ document
   .getElementById("urgent-shipment")
   .addEventListener("click", function () {
     getPrice("urgent-shipment");
+  });
+
+//coupon
+document.getElementById("apply-button").addEventListener("click", function () {
+  const promoInputField = document.getElementById("promo-input");
+  const promoInput = promoInputField.value;
+  const promoCode = "stevekaku";
+  const discountedPriceText = document.getElementById("sub-total-price");
+  let discountedPrice = parseInt(discountedPriceText.innerText);
+  if (promoInput.toLowerCase() == promoCode.toLowerCase()) {
+    const totalDiscount = (discountedPrice / 100) * 20;
+    const finalPrice = discountedPrice - totalDiscount;
+    discountedPriceText.innerText = finalPrice;
+  } else {
+    alert("Invalid Promo Code");
+  }
+});
+
+//checkout
+document
+  .getElementById("checkout-button")
+  .addEventListener("click", function () {
+    alert("Yahoo...! Order Successful!");
   });
