@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Spline Sans Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+}
+
+.mac-book-image img {
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.mac-book-details {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: steelblue;
+}
+
+p {
+  font-size: 1.3em;
+  color: lightslategray;
+}
+
+h2 {
+  font-size: 1.6em;
+  color: steelblue;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+  font-size: 1em;
+  background-color: aliceblue;
+  border: 2px solid steelblue;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+button:hover,
+:focus {
+  background-color: steelblue;
+  color: white;
+}
+
+table {
+  margin-top: 25px;
+  font-size: 1.3em;
+}
+
+table tbody tr,
+td {
+  font-weight: 500;
+  padding-right: 30px;
+}
+
+.last-child td {
+  color: crimson;
+}
+
+.promo-details input {
+  background-color: white;
+  color: black;
+  font-family: inherit;
+  font-size: 1.3em;
+  padding: 5px;
+  border: 2px solid steelblue;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: 0;
+  transition: all 0.1s;
+}
+
+.promo-details input:focus {
+  background-color: steelblue;
+  border-color: steelblue;
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .memory-details button,
+  .storage-details button,
+  .delivery-details button {
+    margin-top: 10px;
+  }
+}
